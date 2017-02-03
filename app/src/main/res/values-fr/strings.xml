@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EZStudio</string>
+    <string name="action_sign_in_short">Connexion</string>
+    <string name="error_field_required">Champ requis</string>
+    <string name="error_incorrect_password">Le mot de passe est incorrecte</string>
+    <string name="error_invalid_email">L\'email est invalide</string>
+    <string name="error_invalid_password">Mot de passe trop court</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Mot de passe (optionel)</string>
+    <string name="action_sign_in">Connexion ou inscription</string>
+    <string name="permission_rationale">L\'accès aux contacts est requis pour sélectionner un email</string>
+</resources>

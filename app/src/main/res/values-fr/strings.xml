@@ -11,7 +11,8 @@
     <string name="action_sign_in">Connexion ou inscription</string>
     <string name="permission_rationale">L\'accès aux contacts est requis pour sélectionner un email</string>
     <string name="latest">Récent</string>
-    <string name="new_project">Nouveau Projet</string>
-    <string name="open_project">Ouvrir un Projet</string>
+    <string name="new_project">Nouveau</string>
+    <string name="open_project">Ouvrir</string>
     <string name="welcome">Bienvenue</string>
+    <string name="title_activity_login">Connexion</string>
 </resources>

@@ -13,4 +13,9 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+
+    <!-- Strings related to the Main Activity -->
+    <string name="welcome">Welcome</string>
+    <string name="open_project">Open Project</string>
+    <string name="new_project">New Project</string>
 </resources>

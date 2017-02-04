@@ -4,7 +4,7 @@ package com.maxim.ezstudio.core;
  * Created by maxim on 04/02/2017.
  */
 
-public class Project {
+public abstract class Project {
     private long id;
     private String name;
     private String date;

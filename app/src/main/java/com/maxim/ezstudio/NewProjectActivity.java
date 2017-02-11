@@ -2,6 +2,9 @@ package com.maxim.ezstudio;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Toast;
+
+import com.maxim.ezstudio.core.ProjectType;
 
 public class NewProjectActivity extends AppCompatActivity {
 
@@ -10,5 +13,14 @@ public class NewProjectActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_project);
         setTitle(R.string.new_project);
+
+        Bundle bundle = getIntent().getExtras();
+
+        ProjectType type;
+
+        if(bundle != null) {
+           type = (ProjectType) bundle.getSerializable("projectType");
+            Toast.makeText(this, type.toString(), Toast.LENGTH_SHORT).show();
+        }
     }
 }

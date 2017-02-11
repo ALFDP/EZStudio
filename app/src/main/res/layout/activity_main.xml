@@ -98,7 +98,6 @@
                 android:layout_centerHorizontal="true"
                 android:headerDividersEnabled="false"
                 android:footerDividersEnabled="false"
-                android:background="@color/colorAccent"
                 android:id="@+id/lv_recentProject" />
         </LinearLayout>
     </RelativeLayout>

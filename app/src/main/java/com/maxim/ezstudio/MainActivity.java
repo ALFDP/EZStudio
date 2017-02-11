@@ -1,6 +1,7 @@
 package com.maxim.ezstudio;
 
 import android.app.AlertDialog;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -29,6 +30,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Get and hide ActionBar on this activity
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
 
         // Link button to view
         this.initButton();

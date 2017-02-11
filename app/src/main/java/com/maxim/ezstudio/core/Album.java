@@ -5,14 +5,23 @@ package com.maxim.ezstudio.core;
  */
 
 public class Album extends Project {
+    private long id;
     private String compositor;
     private String release;
 
+    public Album(){
+
+    }
 
     public Album(long id, String name, String date, String compositor, String release) {
         super(id, name, date);
         this.compositor = compositor;
         this.release = release;
+    }
+
+    @Override
+    public long getId() {
+        return id;
     }
 
     public String getCompositor() {
@@ -30,4 +39,5 @@ public class Album extends Project {
     public void setRelease(String release) {
         this.release = release;
     }
+
 }

@@ -1,6 +1,7 @@
 package com.maxim.ezstudio.core;
 
 import android.content.ContentValues;
+import android.content.Context;
 import android.database.Cursor;
 import android.util.Log;
 
@@ -16,6 +17,10 @@ public class AlbumDAO extends BaseDAO {
     public static final String PROJECT_KEY = "id";
     public static final String PROJECT_NAME = "name";
     public static final String PROJECT_DATE = "date";
+
+    public AlbumDAO(Context context) {
+        super(context);
+    }
 
     public static final String ALBUM_TABLE_CREATE = "CREATE TABLE " +
             ALBUM_TABLE_NAME + "(" +

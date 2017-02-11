@@ -15,12 +15,12 @@
     <string name="open_project">Ouvrir</string>
     <string name="welcome">Bienvenue</string>
     <string name="title_activity_login">Connexion</string>
-    <string name="choose_project_type">Choose project type</string>
+    <string name="choose_project_type">Selectionner un type de projet</string>
     <string name="album">Album</string>
-    <string name="track">Track</string>
-    <string name="create">Create</string>
-    <string name="cancel">Cancel</string>
-    <string name="new_track_project">New Track Project</string>
-    <string name="new_album_project">New Album Project</string>
-    <string name="new_project">New project</string>
+    <string name="track">Morceau</string>
+    <string name="create">Créer</string>
+    <string name="cancel">Annuler</string>
+    <string name="new_track_project">Nouveau Morceau</string>
+    <string name="new_album_project">Nouvel Album</string>
+    <string name="new_project">Nouveau Projet</string>
 </resources>

@@ -15,4 +15,9 @@
     <string name="open_project">Ouvrir</string>
     <string name="welcome">Bienvenue</string>
     <string name="title_activity_login">Connexion</string>
+    <string name="choose_project_type">Choose project type</string>
+    <string name="album">Album</string>
+    <string name="track">Track</string>
+    <string name="create">Create</string>
+    <string name="cancel">Cancel</string>
 </resources>

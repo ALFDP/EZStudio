@@ -3,8 +3,6 @@ package com.maxim.ezstudio;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
-import android.content.Context;
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -33,7 +31,7 @@ public class CreationDialog extends DialogFragment {
 
         btnCreate.setOnClickListener(this.setCreateButton());
         btnCancel.setOnClickListener(this.setCancelButton());
-        
+
         return builder.create();
     }
 

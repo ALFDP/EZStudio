@@ -44,7 +44,7 @@
             android:id="@+id/bt_openProject" />
 
         <Button
-            android:text="@string/new_project"
+            android:text="@string/new_string"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"

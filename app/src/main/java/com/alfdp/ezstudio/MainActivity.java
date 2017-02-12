@@ -27,11 +27,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        // Get and hide ActionBar on this activity
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
-
+        
         // Link button to view
         this.initButton();
 

@@ -1,4 +1,4 @@
-package com.maxim.ezstudio.core;
+package com.alfdp.ezstudio.core;
 
 /**
  * Created by maxim on 04/02/2017.

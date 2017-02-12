@@ -1,9 +1,8 @@
-package com.maxim.ezstudio.core;
+package com.alfdp.ezstudio.core;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
-import android.util.Log;
 
 /**
  * Created by maxim on 11/02/2017.

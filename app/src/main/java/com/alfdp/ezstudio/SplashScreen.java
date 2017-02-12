@@ -1,4 +1,4 @@
-package com.maxim.ezstudio;
+package com.alfdp.ezstudio;
 
 import android.content.Intent;
 import android.os.Handler;

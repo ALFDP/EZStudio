@@ -1,7 +1,6 @@
-package com.maxim.ezstudio.design;
+package com.alfdp.ezstudio.design;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,10 +9,10 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.maxim.ezstudio.R;
-import com.maxim.ezstudio.core.Album;
-import com.maxim.ezstudio.core.Project;
-import com.maxim.ezstudio.core.Track;
+import com.alfdp.ezstudio.R;
+import com.alfdp.ezstudio.core.Album;
+import com.alfdp.ezstudio.core.Project;
+import com.alfdp.ezstudio.core.Track;
 
 /**
  * Created by maxim on 11/02/2017.

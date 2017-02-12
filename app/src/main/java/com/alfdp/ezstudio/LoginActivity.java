@@ -1,4 +1,4 @@
-package com.maxim.ezstudio;
+package com.alfdp.ezstudio;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;

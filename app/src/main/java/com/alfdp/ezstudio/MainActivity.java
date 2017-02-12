@@ -1,20 +1,17 @@
-package com.maxim.ezstudio;
+package com.alfdp.ezstudio;
 
-import android.app.AlertDialog;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 
-import com.maxim.ezstudio.core.Album;
-import com.maxim.ezstudio.core.Project;
-import com.maxim.ezstudio.core.Track;
-import com.maxim.ezstudio.design.RecentListAdapter;
+import com.alfdp.ezstudio.core.Album;
+import com.alfdp.ezstudio.core.Project;
+import com.alfdp.ezstudio.core.Track;
+import com.alfdp.ezstudio.design.RecentListAdapter;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

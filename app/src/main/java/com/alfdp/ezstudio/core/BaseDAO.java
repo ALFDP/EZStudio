@@ -1,4 +1,4 @@
-package com.maxim.ezstudio.core;
+package com.alfdp.ezstudio.core;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

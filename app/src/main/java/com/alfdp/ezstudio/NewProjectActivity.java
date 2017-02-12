@@ -1,10 +1,10 @@
-package com.maxim.ezstudio;
+package com.alfdp.ezstudio;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import com.maxim.ezstudio.core.ProjectType;
+import com.alfdp.ezstudio.core.ProjectType;
 
 public class NewProjectActivity extends AppCompatActivity {
 

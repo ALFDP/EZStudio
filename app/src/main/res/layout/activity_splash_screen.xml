@@ -9,7 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="#FFF"
-    tools:context="com.maxim.ezstudio.MainActivity">
+    tools:context="com.alfdp.ezstudio.MainActivity">
 
     <ImageView
         android:layout_width="150dp"

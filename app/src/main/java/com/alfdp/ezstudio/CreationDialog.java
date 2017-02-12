@@ -1,4 +1,4 @@
-package com.maxim.ezstudio;
+package com.alfdp.ezstudio;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -8,11 +8,10 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import com.maxim.ezstudio.core.ProjectType;
+import com.alfdp.ezstudio.core.ProjectType;
 
 /**
  * Created by maxim on 11/02/2017.

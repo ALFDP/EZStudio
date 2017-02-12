@@ -23,4 +23,7 @@
     <string name="new_track_project">Nouveau Morceau</string>
     <string name="new_album_project">Nouvel Album</string>
     <string name="new_project">Nouveau Projet</string>
+    <string name="release_date">Date de sortie</string>
+    <string name="optional">Optionnel</string>
+    <string name="release_date_optional">Date de sortie (optionnel)</string>
 </resources>

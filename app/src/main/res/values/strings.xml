@@ -28,4 +28,8 @@
     <string name="new_track_project">New Track Project</string>
     <string name="new_album_project">New Album Project</string>
     <string name="new_project">New project</string>
+    <string name="release_date">Release Date</string>
+    <string name="optional">Optional</string>
+    <string name="release_date_optional">Release Date (optional)</string>
+
 </resources>

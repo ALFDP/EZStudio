@@ -9,7 +9,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.alfdp.ezstudio.NewProjectActivity">
+    tools:context="com.alfdp.ezstudio.NewProjectActivity"
+    android:background="@color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,6 +21,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
             android:text="Project Name"/>
 
         <EditText
@@ -27,38 +29,50 @@
             android:layout_height="wrap_content"
             android:inputType="textCapWords"
             android:hint="Enter Project Name"
+            android:textColorHint="@color/darkGrey"
+            android:textColor="@color/darkGrey"
             android:ems="10"
+            android:layout_marginBottom="10dp"
             android:id="@+id/edit_projectName" />
 
         <TextView
             android:text="Compositor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
             android:id="@+id/textView3" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
             android:inputType="textCapWords"
             android:hint="Enter Author Name"
             android:ems="10"
+            android:textColorHint="@color/darkGrey"
+            android:textColor="@color/darkGrey"
             android:id="@+id/edit_compositor" />
 
         <TextView
             android:text="@string/release_date_optional"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
             android:id="@+id/textView4" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="01.01.2017"
+            android:textColorHint="@color/darkGrey"
+            android:textColor="@color/darkGrey"
             android:inputType="date"
             android:ems="10"
-            android:id="@+id/editText3" />
+
+            android:id="@+id/edit_releaseDate" />
 
     </LinearLayout>
-
 
 
     <LinearLayout
@@ -68,9 +82,11 @@
         android:layout_weight="0">
 
         <Button
+            android:id="@+id/btn_createNewProject"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="@color/colorPrimary"
             android:text="@string/create"/>
 
         <Button
@@ -78,6 +94,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="@color/colorAccent"
             android:text="@string/cancel"/>
 
     </LinearLayout>

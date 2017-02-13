@@ -8,6 +8,10 @@ public class Track extends Project {
     private String compositor;
     private long[] links;
 
+    public Track(){
+
+    }
+
     public Track(String compositor, long[] links) {
         this.compositor = compositor;
         this.links = links;

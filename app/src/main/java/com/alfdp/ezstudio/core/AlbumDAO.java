@@ -70,12 +70,14 @@ public class AlbumDAO extends BaseDAO {
      * @return
      */
     public Album get(long id) {
-        Cursor c = db.rawQuery("select " + PROJECT_NAME + " from " + ALBUM_TABLE_NAME + " where id = ?", new String[]{String.valueOf(id)});
+        Cursor c = db.rawQuery("select * from " + ALBUM_TABLE_NAME + " where id = ?", new String[]{String.valueOf(id)});
         Album newAlbum = new Album();
-        newAlbum.setId(id);
         c.moveToFirst();
         String name = c.getString(1);
+        String compositor = c.getString(3);
+        newAlbum.setId(id);
         newAlbum.setName(name);
+        newAlbum.setCompositor(compositor);
 
         c.close();
 
@@ -83,10 +85,14 @@ public class AlbumDAO extends BaseDAO {
     }
 
     public Album get(String name) {
-        Cursor c = db.rawQuery("select " + PROJECT_NAME + " from " + ALBUM_TABLE_NAME + " where "+PROJECT_NAME+" = ?", new String[]{name});
+        Cursor c = db.rawQuery("select * from " + ALBUM_TABLE_NAME + " where "+PROJECT_NAME+" = ?", new String[]{name});
         Album newAlbum = new Album();
-        c.moveToNext();
-        newAlbum.setId(c.getLong(0));
+        long id = c.getLong(0);
+        String compositor = c.getString(3);
+        c.moveToFirst();
+        newAlbum.setId(id);
+        newAlbum.setName(name);
+        newAlbum.setCompositor(compositor);
         c.close();
 
         return newAlbum;

@@ -5,7 +5,6 @@ package com.alfdp.ezstudio.core;
  */
 
 public class Album extends Project {
-    private long id;
     private String compositor;
     private String release;
 
@@ -17,11 +16,6 @@ public class Album extends Project {
         super(id, name, date);
         this.compositor = compositor;
         this.release = release;
-    }
-
-    @Override
-    public long getId() {
-        return id;
     }
 
     public String getCompositor() {

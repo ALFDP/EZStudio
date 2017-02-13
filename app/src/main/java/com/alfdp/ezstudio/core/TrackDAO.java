@@ -41,8 +41,9 @@ public class TrackDAO extends BaseDAO {
      */
     public void add(Track track) {
         ContentValues contentValues = new ContentValues();
-        contentValues.put(AlbumDAO.PROJECT_NAME, track.getName());
-        contentValues.put(AlbumDAO.ALBUM_COMPOSITOR, track.getCompositor());
+        contentValues.put(PROJECT_NAME, track.getName());
+        contentValues.put(PROJECT_DATE, track.getDate());
+        contentValues.put(TRACK_COMPOSITOR, track.getCompositor());
         db.insert(TRACK_TABLE_NAME, null, contentValues);
     }
 
@@ -68,11 +69,17 @@ public class TrackDAO extends BaseDAO {
      * @return
      */
     public Track get(long id) {
-        Cursor c = db.rawQuery("select " + PROJECT_NAME + " from " + TRACK_TABLE_NAME + " where id = ?", new String[]{String.valueOf(id)});
+        Cursor c = db.rawQuery("select * from " + TRACK_TABLE_NAME + " where id = ?", new String[]{String.valueOf(id)});
         Track newTrack = new Track();
+        c.moveToFirst();
+        String name = c.getString(1);
+        String creationDate = c.getString(2);
+        String compositor = c.getString(3);
+
         newTrack.setId(id);
-        c.moveToNext();
-        newTrack.setName(c.getString(0));
+        newTrack.setName(name);
+        newTrack.setDate(creationDate);
+        newTrack.setCompositor(compositor);
 
         c.close();
 
@@ -80,10 +87,15 @@ public class TrackDAO extends BaseDAO {
     }
 
     public Track get(String name) {
-        Cursor c = db.rawQuery("select " + PROJECT_NAME + " from " + TRACK_TABLE_NAME + " where "+PROJECT_NAME+" = ?", new String[]{name});
+        Cursor c = db.rawQuery("select * from " + TRACK_TABLE_NAME + " where "+PROJECT_NAME+" = ?", new String[]{name});
         Track newTrack = new Track();
-        c.moveToNext();
-        newTrack.setId(c.getLong(0));
+        c.moveToFirst();
+        long id = c.getLong(0);
+        String creationDate = c.getString(2);
+        String compositor = c.getString(3);
+        newTrack.setId(id);
+        newTrack.setName(name);
+        newTrack.setCompositor(compositor);
         c.close();
 
         return newTrack;

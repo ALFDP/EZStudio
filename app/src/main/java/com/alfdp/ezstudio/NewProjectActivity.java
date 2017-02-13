@@ -66,7 +66,7 @@ public class NewProjectActivity extends AppCompatActivity {
         if(ProjectType.ALBUM == projectType) {
             createNewAlbum();
         } else {
-            createTrack();
+            createNewTrack();
         }
 
     }
@@ -76,13 +76,13 @@ public class NewProjectActivity extends AppCompatActivity {
         final EditText projectCompositorText = (EditText) findViewById(R.id.edit_compositor);
         final EditText projectReleaseDate = (EditText) findViewById(R.id.edit_releaseDate);
 
-        String date = new DateHelper().getActualDate();
+        String creationDate = new DateHelper().getActualDate();
 
         Album album = new Album();
 
         album.setName(projectNameText.getText().toString());
         album.setCompositor(projectCompositorText.getText().toString());
-        album.setDate(date);
+        album.setDate(creationDate);
 
         String release = projectReleaseDate.getText().toString();
 
@@ -100,6 +100,25 @@ public class NewProjectActivity extends AppCompatActivity {
         Toast.makeText(this, "Album created", Toast.LENGTH_SHORT).show();
     }
 
+    private void createNewTrack() {
+        final EditText projectNameText = (EditText) findViewById(R.id.edit_projectName);
+        final EditText projectCompositorText = (EditText) findViewById(R.id.edit_compositor);
+
+        String creationDate = new DateHelper().getActualDate();
+
+        Track track = new Track();
+
+        track.setDate(creationDate);
+        track.setName(projectNameText.getText().toString());
+        track.setCompositor(projectCompositorText.getText().toString());
+
+        ProjectManagement management = new ProjectManagement(getBaseContext());
+        Track fromBdd = management.addTrack(track);
+
+        putInCache(fromBdd);
+
+        Toast.makeText(this, "Track created", Toast.LENGTH_SHORT).show();
+    }
 
     private void putInCache(Project project) {
         if(project instanceof Album) {
@@ -139,20 +158,6 @@ public class NewProjectActivity extends AppCompatActivity {
             editor.commit();
         }
     }
-
-    private void createTrack() {
-        final EditText projectNameText = (EditText) findViewById(R.id.edit_projectName);
-        final EditText projectCompositorText = (EditText) findViewById(R.id.edit_compositor);
-
-        String date = new DateHelper().getActualDate();
-
-        Track track = new Track();
-
-        track.setDate(date);
-        track.setName(projectNameText.getText().toString());
-        track.setCompositor(projectCompositorText.getText().toString());
-    }
-
 
     private View.OnClickListener creationListener() {
         return new View.OnClickListener() {

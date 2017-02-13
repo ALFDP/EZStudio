@@ -59,20 +59,20 @@ public class SplashScreen extends AppCompatActivity {
 
             // This is just a normal run
             Log.e("First RUN", "FALSE");
-            Toast.makeText(this, "LATEST UPDATE", Toast.LENGTH_SHORT);
+            Toast.makeText(this, "LATEST UPDATE", Toast.LENGTH_SHORT).show();
             return;
 
         } else if (savedVersionCode == NOT_EXIST) {
 
             // TODO This is a new install (or the user cleared the shared preferences)
             Log.e("First RUN", "TRUE");
-            Toast.makeText(this, "FIRST CONFIG", Toast.LENGTH_SHORT);
+            Toast.makeText(this, "FIRST CONFIG", Toast.LENGTH_SHORT).show();
 
         } else if (currentVersionCode > savedVersionCode) {
 
             // TODO This is an upgrade
             Log.e("First RUN", "UPGRADE");
-            Toast.makeText(this, "UPGRADE CONFIG", Toast.LENGTH_SHORT);
+            Toast.makeText(this, "UPGRADE CONFIG", Toast.LENGTH_SHORT).show();
 
         }
 

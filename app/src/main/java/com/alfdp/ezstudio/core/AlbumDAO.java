@@ -77,5 +77,14 @@ public class AlbumDAO extends BaseDAO {
         return newAlbum;
     }
 
+    public Album get(String name) {
+        Cursor c = db.rawQuery("select " + PROJECT_NAME + " from " + ALBUM_TABLE_NAME + " where "+PROJECT_NAME+" = ?", new String[]{name});
+        Album newAlbum = new Album();
+        c.moveToNext();
+        newAlbum.setId(c.getLong(0));
+        c.close();
+
+        return newAlbum;
+    }
 
 }

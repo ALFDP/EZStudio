@@ -1,5 +1,6 @@
 package com.alfdp.ezstudio;
 
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -11,8 +12,10 @@ import android.widget.Toast;
 
 import com.alfdp.ezstudio.core.Album;
 import com.alfdp.ezstudio.core.DateHelper;
+import com.alfdp.ezstudio.core.Project;
 import com.alfdp.ezstudio.core.ProjectType;
 import com.alfdp.ezstudio.core.Track;
+import com.alfdp.ezstudio.project.ProjectManagement;
 
 public class NewProjectActivity extends AppCompatActivity {
 
@@ -87,6 +90,53 @@ public class NewProjectActivity extends AppCompatActivity {
             album.setRelease(release);
         } else {
             album.setRelease("NONE");
+        }
+
+        ProjectManagement management = new ProjectManagement(getBaseContext());
+        Album fromBdd = management.addAlbum(album);
+
+        putInCache(fromBdd);
+
+        Toast.makeText(this, "Album created", Toast.LENGTH_SHORT).show();
+    }
+
+
+    private void putInCache(Project project) {
+        if(project instanceof Album) {
+            String key = "0." + String.valueOf(project.getId());
+            moveItem(key);
+        } else {
+            String key = "1." + String.valueOf(project.getId());
+            moveItem(key);
+        }
+
+
+    }
+
+    private void moveItem(String key) {
+        final String PREFS_NAME = "CacheProject";
+
+        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+        SharedPreferences.Editor editor = settings.edit();
+
+        String cache1 = settings.getString("cache1", null);
+
+        if(TextUtils.isEmpty(cache1)) {
+            editor.putString("cache1", key);
+            editor.commit();
+        } else {
+            String cache2 = cache1;
+            String cache3 = settings.getString("cache2", "empty");
+            String cache4 = settings.getString("cache3", "empty");
+            String cache5 =  settings.getString("cache4", "empty");
+
+            editor.putString("cache1", key);
+            editor.putString("cache2", cache2);
+            editor.putString("cache3", cache3);
+            editor.putString("cache4", cache4);
+            editor.putString("cache5", cache5);
+
+            editor.commit();
         }
     }
 

@@ -87,6 +87,7 @@ public class AlbumDAO extends BaseDAO {
     public Album get(String name) {
         Cursor c = db.rawQuery("select * from " + ALBUM_TABLE_NAME + " where "+PROJECT_NAME+" = ?", new String[]{name});
         Album newAlbum = new Album();
+        c.moveToFirst();
         long id = c.getLong(0);
         String compositor = c.getString(3);
         c.moveToFirst();

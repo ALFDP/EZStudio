@@ -39,13 +39,18 @@ public class MainActivity extends AppCompatActivity {
         // Init View
         this.initList();
 
-        // Debug Init List
-        //this.initListDEBUG();
     }
 
     @Override
     protected void onStart() {
         super.onStart();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        initList();
     }
 
     @Override

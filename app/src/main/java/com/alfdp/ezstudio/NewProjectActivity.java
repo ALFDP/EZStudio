@@ -175,6 +175,7 @@ public class NewProjectActivity extends AppCompatActivity {
                 } else {
                     Log.i("CREATION", "SUCCESS");
                     createNewProject();
+                    finish();
                 }
             }
         };

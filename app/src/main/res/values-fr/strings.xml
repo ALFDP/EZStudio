@@ -26,4 +26,5 @@
     <string name="release_date">Date de sortie</string>
     <string name="optional">Optionnel</string>
     <string name="release_date_optional">Date de sortie (optionnel)</string>
+    <string name="no_recent_project">No recent project</string>
 </resources>

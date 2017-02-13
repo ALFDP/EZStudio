@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.alfdp.ezstudio.core.Album;
 import com.alfdp.ezstudio.core.AlbumDAO;
@@ -74,6 +75,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void initList() {
         final String PREFS_NAME = "CacheProject";
+        ListView recentList = (ListView) findViewById(R.id.lv_recentProject);
+        TextView noRecent = (TextView) findViewById(R.id.lb_noRecentProject);
+
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
 
         ArrayList<Project> projects = new ArrayList<Project>();
@@ -92,12 +96,20 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        Project[] projectTab = new Project[projects.size()];
-        projectTab = projects.toArray(projectTab);
+        if(0 < projects.size()) {
+            Project[] projectTab = new Project[projects.size()];
+            noRecent.setVisibility(View.GONE);
+            recentList.setVisibility(View.VISIBLE);
+            projectTab = projects.toArray(projectTab);
+            listAdapter = new RecentListAdapter(this, projectTab);
+            recentList.setAdapter(listAdapter);
 
-        listAdapter = new RecentListAdapter(this, projectTab);
-        ListView recentList = (ListView) findViewById(R.id.lv_recentProject);
-        recentList.setAdapter(listAdapter);
+        } else {
+            noRecent.setVisibility(View.VISIBLE);
+            recentList.setVisibility(View.GONE);
+        }
+
+
 
     }
 

@@ -1,5 +1,6 @@
 package com.alfdp.ezstudio;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -107,7 +108,9 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_maps) {
-            // Handle the camera action
+            // Handle the maps action
+            Intent intent = new Intent(this, MapsActivity.class);
+            this.startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -181,9 +184,7 @@ public class MainActivity extends AppCompatActivity
 
     private long prepareId(String idToPrepare) {
 
-        long id = Long.valueOf(idToPrepare.substring(2)).longValue();
-
-        return id;
+        return Long.valueOf(idToPrepare.substring(2));
     }
 
     private Project getProjectFromBdd(String key) {

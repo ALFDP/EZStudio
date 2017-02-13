@@ -3,6 +3,7 @@ package com.alfdp.ezstudio.core;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
+import android.util.Log;
 
 /**
  * Created by maxim on 11/02/2017.
@@ -40,7 +41,10 @@ public class AlbumDAO extends BaseDAO {
         ContentValues contentValues = new ContentValues();
         contentValues.put(AlbumDAO.PROJECT_NAME, album.getName());
         contentValues.put(AlbumDAO.ALBUM_COMPOSITOR, album.getCompositor());
-        db.insert(ALBUM_TABLE_NAME, null, contentValues);
+        long insert = db.insert(ALBUM_TABLE_NAME, null, contentValues);
+
+        Log.e("INSERT", String.valueOf(insert));
+
 
     }
 
@@ -69,8 +73,9 @@ public class AlbumDAO extends BaseDAO {
         Cursor c = db.rawQuery("select " + PROJECT_NAME + " from " + ALBUM_TABLE_NAME + " where id = ?", new String[]{String.valueOf(id)});
         Album newAlbum = new Album();
         newAlbum.setId(id);
-        c.moveToNext();
-        newAlbum.setName(c.getString(0));
+        c.moveToFirst();
+        String name = c.getString(1);
+        newAlbum.setName(name);
 
         c.close();
 

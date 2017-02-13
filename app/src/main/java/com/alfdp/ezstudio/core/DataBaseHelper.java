@@ -28,7 +28,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
                     ALBUM_RELEASE_DATE + " TEXT);";
 
     // String for the Track Type table
-    public static final String TRACK_TABLE_NAME = "Album";
+    public static final String TRACK_TABLE_NAME = "Track";
     public static final String TRACK_ALBUM_LINK = "link";
     public static final String TRACK_COMPOSITOR = "compositor";
     public static final String TRACK_TABLE_CREATE = "CREATE TABLE " +

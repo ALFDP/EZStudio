@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         this.initList();
 
         // Debug Init List
-        this.initListDEBUG();
+        //this.initListDEBUG();
     }
 
     @Override
@@ -87,7 +87,8 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        Project[] projectTab = (Project[]) projects.toArray();
+        Project[] projectTab = new Project[projects.size()];
+        projectTab = projects.toArray(projectTab);
 
         listAdapter = new RecentListAdapter(this, projectTab);
         ListView recentList = (ListView) findViewById(R.id.lv_recentProject);
@@ -97,7 +98,9 @@ public class MainActivity extends AppCompatActivity {
 
     private ProjectType getProjectType(String key) {
 
-        if(key.substring(0,1) == "0") {
+        String parseKey = key.substring(0,1);
+
+        if(parseKey.equals("0")) {
             return ProjectType.ALBUM;
         }
         return ProjectType.TRACK;

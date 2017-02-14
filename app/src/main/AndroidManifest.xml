@@ -33,23 +33,16 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".LoginActivity"
-            android:label="@string/title_activity_login"
-            android:parentActivityName=".SplashScreen">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.alfdp.ezstudio.SplashScreen" />
         </activity>
         <activity android:name=".NewProjectActivity" />
         <!--
@@ -73,9 +66,7 @@
 
         <activity
             android:name=".MapsActivity"
-            android:label="@string/title_activity_maps">
-
-        </activity>
+            android:label="@string/title_activity_maps"></activity>
 
         <receiver android:name=".ProjectListWidget">
             <intent-filter>
@@ -86,6 +77,8 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/project_list_widget_info" />
         </receiver>
+
+        <activity android:name=".LoginActivity"></activity>
     </application>
 
 </manifest>

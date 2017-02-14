@@ -23,4 +23,9 @@
 
     <include layout="@layout/content_main" />
 
+    <RelativeLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></RelativeLayout>
+
 </android.support.design.widget.CoordinatorLayout>

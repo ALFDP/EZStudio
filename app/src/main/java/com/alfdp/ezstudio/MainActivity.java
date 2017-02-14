@@ -1,8 +1,10 @@
 package com.alfdp.ezstudio;
 
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -107,8 +109,12 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
+
+
+
         if (id == R.id.nav_maps) {
             // Handle the maps action
+            MapsActivity maps = new MapsActivity();
             Intent intent = new Intent(this, MapsActivity.class);
             this.startActivity(intent);
         }
@@ -150,7 +156,7 @@ public class MainActivity extends AppCompatActivity
         strings.add(settings.getString("cache5", "empty"));
 
         for (String object: strings) {
-            if(object != "empty") {
+            if(!object.equals("empty")) {
                 projects.add(getProjectFromBdd(object));
             }
         }
@@ -183,8 +189,14 @@ public class MainActivity extends AppCompatActivity
     }
 
     private long prepareId(String idToPrepare) {
+        long id = 0;
+        try {
+            id = Long.valueOf(idToPrepare.substring(2)).longValue();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
-        return Long.valueOf(idToPrepare.substring(2));
+        return id;
     }
 
     private Project getProjectFromBdd(String key) {

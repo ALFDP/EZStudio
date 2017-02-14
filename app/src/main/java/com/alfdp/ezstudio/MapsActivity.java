@@ -114,7 +114,6 @@ public class MapsActivity extends FragmentActivity implements GoogleApiClient.Co
         }
     }
 
-
     @Override
     protected void onStart() {
         super.onStart();

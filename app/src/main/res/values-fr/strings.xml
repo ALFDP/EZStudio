@@ -26,5 +26,16 @@
     <string name="release_date">Date de sortie</string>
     <string name="optional">Optionnel</string>
     <string name="release_date_optional">Date de sortie (optionnel)</string>
-    <string name="no_recent_project">No recent project</string>
+    <string name="no_recent_project">Pas de projet récent</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_map">MapActivity</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="empty">Empty</string>
 </resources>

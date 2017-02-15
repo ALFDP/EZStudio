@@ -35,6 +35,8 @@ public class LoginActivity extends Activity {
 
                 if(TextUtils.isEmpty(password) || TextUtils.isEmpty(user)) {
                     Toast.makeText(getBaseContext(), "Please fill the fields", Toast.LENGTH_SHORT).show();
+                } else if (!user.equals("user") || !password.equals("password1234")) {
+                    Toast.makeText(getBaseContext(), "Login / Password couple did not match", Toast.LENGTH_SHORT).show();
                 } else {
                     launchMain(user);
                 }

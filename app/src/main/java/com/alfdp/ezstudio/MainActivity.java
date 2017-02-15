@@ -190,12 +190,7 @@ public class MainActivity extends AppCompatActivity
 
     private long prepareId(String idToPrepare) {
         long id = 0;
-        try {
-            id = Long.valueOf(idToPrepare.substring(2)).longValue();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
+        id = Long.valueOf(idToPrepare.substring(2)).longValue();
         return id;
     }
 

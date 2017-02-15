@@ -66,7 +66,7 @@
 
         <activity
             android:name=".MapsActivity"
-            android:label="@string/title_activity_maps"></activity>
+            android:label="@string/title_activity_maps" />
 
         <receiver android:name=".ProjectListWidget">
             <intent-filter>
@@ -78,7 +78,17 @@
                 android:resource="@xml/project_list_widget_info" />
         </receiver>
 
-        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".LoginActivity" />
+
+        <receiver android:name=".HomeWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/home_widget_info" />
+        </receiver>
     </application>
 
 </manifest>

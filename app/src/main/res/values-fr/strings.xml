@@ -35,7 +35,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_map">MapActivity</string>
     <string name="title_activity_maps">Map</string>
-    <string name="appwidget_text">EXAMPLE</string>
+    <string name="appwidget_text">App</string>
     <string name="add_widget">Add widget</string>
     <string name="empty">Empty</string>
 </resources>
